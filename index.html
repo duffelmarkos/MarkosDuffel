@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
     <meta charset="UTF-8">
     <title>Markos Duffel | Tattoo Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="tsparticles"></div>
     <header>
         <img src="markoslogo.png" alt="Markos Logo" class="logo">
         <h1>Markos Duffel Tattoo</h1>
@@ -287,5 +289,47 @@
         slides[slideIndex-1].style.display = "block";
     }
     </script>
+<script>
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: true, zIndex: -1 },
+    background: { color: "#0e001a" },
+    particles: {
+      number: { value: 60 },
+      color: { value: ["#b88aff", "#ffffff"] },
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.4,
+        animation: { enable: true, speed: 0.5 }
+      },
+      size: { value: 2, random: true },
+      move: { enable: true, speed: 0.3, random: true },
+      links: {
+        enable: true,
+        distance: 140,
+        color: "#aa66ff",
+        opacity: 0.4,
+        width: 1
+      }
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "trail" }
+      },
+      modes: {
+        trail: {
+          delay: 0.2,
+          quantity: 4,
+          particles: {
+            color: { value: "#ffffff" },
+            opacity: { value: 0.6 },
+            size: { value: 3 }
+          }
+        }
+      }
+    },
+    detectRetina: true
+  });
+</script>
+
 </body>
 </html>
