@@ -87,13 +87,14 @@
   <section id="contact" class="centered">
     <h2>Agenda tu cita</h2>
     <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo electrónico" required />
-      <input type="tel" placeholder="Tu WhatsApp (opcional)" />
-      <textarea placeholder="Cuéntame tu idea de tatuaje" rows="4"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <form id="contact-form" onsubmit="sendEmail(event)">
+  <input type="text" id="name" placeholder="Tu nombre" required />
+  <input type="email" id="email" placeholder="Tu correo electrónico" required />
+  <input type="tel" id="whatsapp" placeholder="Tu WhatsApp (opcional)" />
+  <textarea id="message" placeholder="Cuéntame tu idea de tatuaje" rows="4"></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
     <div class="whatsapp-direct">
       <p>O escríbeme directamente por <a href="https://wa.me/5216563950686" target="_blank" class="whatsapp-link">WhatsApp</a></p>
     </div>
