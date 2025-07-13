@@ -154,7 +154,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  padding: 1rem;
+  background-color: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(184, 138, 255, 0.3);
 }
 
 form input,
@@ -164,6 +169,11 @@ form textarea {
   color: #fff;
   border: 1px solid #b88aff;
   border-radius: 6px;
+  font-size: 1rem;
+}
+
+form textarea {
+  min-height: 100px;
 }
 
 form button {
@@ -175,6 +185,7 @@ form button {
   border: none;
   border-radius: 6px;
   transition: background 0.3s ease;
+  font-size: 1rem;
 }
 
 form button:hover {
@@ -183,9 +194,10 @@ form button:hover {
 
 /* WhatsApp directo */
 .whatsapp-direct {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
+
 
 .whatsapp-link {
   display: inline-block;
