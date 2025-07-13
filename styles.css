@@ -1,3 +1,4 @@
+
 /* Fondo de rayos animado */
 .background-rays {
   position: fixed;
@@ -33,7 +34,7 @@ h1, h2 {
   text-shadow: 2px 2px 4px #000;
 }
 
-/* Centrado */
+/* Centrado general */
 .centered {
   text-align: center;
 }
@@ -90,34 +91,32 @@ nav .menu li a {
   font-weight: bold;
 }
 
-/* Header */
+/* Header limpio sin fondo adicional */
 header {
   background: none;
   padding-top: 2rem;
 }
 
-/* Secciones */
+/* Secciones generales */
 section {
   padding: 2rem;
   background-color: transparent;
   margin: 2rem auto;
   border-radius: 20px;
-  border: 1px solid rgba(184, 138, 255, 0.3);
-  box-shadow: 0 0 10px #b88aff;
+  border: 1px solid rgba(184, 138, 255, 0.2);
+  box-shadow: 0 0 20px rgba(184, 138, 255, 0.5),
+              0 0 40px rgba(184, 138, 255, 0.2);
   backdrop-filter: blur(1px);
-  transition: box-shadow 0.3s;
+  max-width: 900px;
 }
 
-section:hover {
-  box-shadow: 0 0 20px #b88aff, 0 0 40px rgba(184, 138, 255, 0.4);
-}
-
+/* Texto general */
 section p {
   line-height: 1.7;
   font-size: 1rem;
 }
 
-/* Imagen circular de Markos */
+/* Imagen redonda de Markos */
 .markos-img {
   width: 180px;
   border-radius: 50%;
@@ -127,26 +126,43 @@ section p {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
+/* Galería */
+#work {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+#work h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
 /* Galería de tatuajes */
 .tattoos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .tattoos img {
-  width: 200px;
-  height: 260px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border: 2px solid #b88aff;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(184, 138, 255, 0.4);
 }
 
 .tattoos img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #b88aff;
+  box-shadow: 0 0 15px #b88aff, 0 0 30px #b88aff;
 }
 
 /* Formulario */
@@ -154,12 +170,10 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 2rem auto;
-  max-width: 400px;
-  padding: 1rem;
-  background-color: rgba(30, 30, 30, 0.5);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(184, 138, 255, 0.3);
+  margin-top: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form input,
@@ -169,11 +183,6 @@ form textarea {
   color: #fff;
   border: 1px solid #b88aff;
   border-radius: 6px;
-  font-size: 1rem;
-}
-
-form textarea {
-  min-height: 100px;
 }
 
 form button {
@@ -185,19 +194,17 @@ form button {
   border: none;
   border-radius: 6px;
   transition: background 0.3s ease;
-  font-size: 1rem;
 }
 
 form button:hover {
   background-color: #d9b3ff;
 }
 
-/* WhatsApp directo */
+/* WhatsApp contacto */
 .whatsapp-direct {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   text-align: center;
 }
-
 
 .whatsapp-link {
   display: inline-block;
@@ -243,22 +250,22 @@ form button:hover {
   }
 }
 
-/* Botón fijo para volver arriba */
-.floating-back {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #b88aff;
-  color: #0e0e0e;
-  padding: 0.6rem 1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px #b88aff;
-  transition: background 0.3s ease;
-  z-index: 999;
+.back-to-top {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.floating-back:hover {
-  background-color: #d9b3ff;
+.back-to-top a {
+  color: #b88aff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #b88aff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.back-to-top a:hover {
+  background-color: #b88aff;
+  color: #0e0e0e;
 }
