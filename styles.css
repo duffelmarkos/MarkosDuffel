@@ -53,15 +53,20 @@ nav a {
   margin: 0 1rem;
   font-weight: bold;
   font-size: 1.1rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  transition: background 0.3s;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  box-shadow: 0 0 8px #aa66ff;                /* Efecto brillante */
+  transition: 0.3s ease;
+  display: inline-block;
 }
 
 nav a:hover {
   background-color: #aa66ff;
   color: #000;
+  box-shadow: 0 0 12px #ffffff;
 }
+
 
 section {
   padding: 2rem;
