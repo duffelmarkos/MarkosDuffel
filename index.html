@@ -2,94 +2,101 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markos Duffel | Tattoo Studio</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Old+Standard+TT&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Fondo animado de rayos -->
-  <div class="fondo-rayos">
-    <div class="rayo"></div>
-    <div class="rayo"></div>
-    <div class="rayo"></div>
-  </div>
+
+  <div class="background-rays"></div>
 
   <header>
-    <img src="markoslogo.png" alt="Markos Logo" class="logo" />
+    <img src="markoslogo.png" alt="Logo" class="logo" />
     <h1>Markos Duffel Tattoo</h1>
-    <div class="slogan">Donde termina el miedo y empieza el arte...</div>
-    <div class="nav-background">
-      <nav>
-        <a href="#about">Sobre mí</a>
-        <a href="#galeria">Galería</a>
-        <a href="#cita">Agenda tu cita</a>
-      </nav>
-    </div>
+    <p class="slogan">Donde termina el miedo y empieza el arte...</p>
+    <nav>
+      <ul class="menu">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#work">Galería</a></li>
+        <li><a href="#contact">Agenda tu cita</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about" class="seccion">
-    <img src="markostattoo.jpg" alt="Markos tatuando" class="foto-bio" />
+  <section id="about">
     <h2>Sobre mí</h2>
-    <p>Nací en Ciudad Juárez, entre concreto, silencio y fuego.</p>
-    <p>Desde niño supe que el arte no era un pasatiempo... era un arma.</p>
-    <p>Cuando no me dejaron tatuarme, comencé a tatuar a los demás.</p>
-    <p>No pedí permiso. Solo seguí el llamado.</p>
-    <p>Cada línea que trazo es un pacto. Cada aguja es una extensión de mi alma.</p>
-    <p>No hago tatuajes bonitos. Marco símbolos que cargan con historias, miedos, sombras... y los transformo en algo sagrado.</p>
-    <p>Aquí no vienes a decorarte. Vienes a soltar el miedo. Vienes a comenzar de nuevo.</p>
+    <img src="markos.jpg" alt="Markos" class="markos-img" />
+    <p>
+      Nací en Ciudad Juárez, entre concreto, silencio y fuego.<br>
+      Desde niño supe que el arte no era un pasatiempo... era un arma.<br>
+      Cuando no me dejaron tatuarme, comencé a tatuar a los demás.<br>
+      No pedí permiso. Solo seguí el llamado.
+    </p>
+    <p>
+      Cada línea que trazo es un pacto.<br>
+      Cada aguja es una extensión de mi alma.<br>
+      No hago tatuajes bonitos. Marco símbolos que cargan con historias, miedos, sombras... y los transformo en algo sagrado.
+    </p>
+    <p>
+      Aquí no vienes a decorarte. Vienes a soltar el miedo. Vienes a comenzar de nuevo.
+    </p>
   </section>
 
-  <section id="galeria" class="seccion">
-  <h2>Galería</h2>
-  <div class="galeria">
-    <img src="picture (1).jpg" alt="Tattoo 1" />
-    <img src="picture (2).jpg" alt="Tattoo 2" />
-    <img src="picture (3).jpg" alt="Tattoo 3" />
-    <img src="picture (4).jpg" alt="Tattoo 4" />
-    <img src="picture (5).jpg" alt="Tattoo 5" />
-    <img src="picture (6).jpg" alt="Tattoo 6" />
-    <img src="picture (7).jpg" alt="Tattoo 7" />
-    <img src="picture (8).jpg" alt="Tattoo 8" />
-    <img src="picture (9).jpg" alt="Tattoo 9" />
-    <img src="picture (10).jpg" alt="Tattoo 10" />
-    <img src="picture (11).jpg" alt="Tattoo 11" />
-    <img src="picture (12).jpg" alt="Tattoo 12" />
-    <img src="picture (13).jpg" alt="Tattoo 13" />
-    <img src="picture (14).jpg" alt="Tattoo 14" />
-    <img src="picture (15).jpg" alt="Tattoo 15" />
-    <img src="picture (16).jpg" alt="Tattoo 16" />
-    <img src="picture (17).jpg" alt="Tattoo 17" />
-    <img src="picture (18).jpg" alt="Tattoo 18" />
-    <img src="picture (19).jpg" alt="Tattoo 19" />
-    <img src="picture (20).jpg" alt="Tattoo 20" />
-    <img src="picture (21).jpg" alt="Tattoo 21" />
-    <img src="picture (22).jpg" alt="Tattoo 22" />
-    <img src="picture (23).jpg" alt="Tattoo 23" />
-    <img src="picture (24).jpg" alt="Tattoo 24" />
-    <img src="picture (25).jpg" alt="Tattoo 25" />
-    <img src="picture (26).jpg" alt="Tattoo 26" />
-    <img src="picture (27).jpg" alt="Tattoo 27" />
-    <img src="picture (28).jpg" alt="Tattoo 28" />
-  </div>
-</section>
+  <section id="work">
+    <h2>Galería</h2>
+    <div class="tattoos">
+      <!-- Galería completa -->
+      <img src="picture (1).jpg" alt="Tattoo 1" />
+      <img src="picture (2).jpg" alt="Tattoo 2" />
+      <img src="picture (3).jpg" alt="Tattoo 3" />
+      <img src="picture (4).jpg" alt="Tattoo 4" />
+      <img src="picture (5).jpg" alt="Tattoo 5" />
+      <img src="picture (6).jpg" alt="Tattoo 6" />
+      <img src="picture (7).jpg" alt="Tattoo 7" />
+      <img src="picture (8).jpg" alt="Tattoo 8" />
+      <img src="picture (9).jpg" alt="Tattoo 9" />
+      <img src="picture (10).jpg" alt="Tattoo 10" />
+      <img src="picture (11).jpg" alt="Tattoo 11" />
+      <img src="picture (12).jpg" alt="Tattoo 12" />
+      <img src="picture (13).jpg" alt="Tattoo 13" />
+      <img src="picture (14).jpg" alt="Tattoo 14" />
+      <img src="picture (15).jpg" alt="Tattoo 15" />
+      <img src="picture (16).jpg" alt="Tattoo 16" />
+      <img src="picture (17).jpg" alt="Tattoo 17" />
+      <img src="picture (18).jpg" alt="Tattoo 18" />
+      <img src="picture (19).jpg" alt="Tattoo 19" />
+      <img src="picture (20).jpg" alt="Tattoo 20" />
+      <img src="picture (21).jpg" alt="Tattoo 21" />
+      <img src="picture (22).jpg" alt="Tattoo 22" />
+      <img src="picture (23).jpg" alt="Tattoo 23" />
+      <img src="picture (24).jpg" alt="Tattoo 24" />
+      <img src="picture (25).jpg" alt="Tattoo 25" />
+      <img src="picture (26).jpg" alt="Tattoo 26" />
+      <img src="picture (27).jpg" alt="Tattoo 27" />
+      <img src="picture (28).jpg" alt="Tattoo 28" />
+    </div>
+  </section>
 
-
-  <section id="cita" class="seccion">
+  <section id="contact">
     <h2>Agenda tu cita</h2>
     <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
-    <form action="mailto:duffelmarkos@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="correo" placeholder="Tu correo electrónico" required />
-      <input type="tel" name="telefono" placeholder="Tu WhatsApp (opcional)" />
-      <textarea name="mensaje" rows="5" placeholder="Cuéntame tu idea de tatuaje" required></textarea>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <input type="tel" placeholder="Tu WhatsApp (opcional)" />
+      <textarea placeholder="Cuéntame tu idea de tatuaje"></textarea>
       <button type="submit">Enviar</button>
     </form>
-    <a href="https://wa.me/526563950686" target="_blank" class="whatsapp-boton">📲 Escríbeme por WhatsApp</a>
+    <div class="whatsapp-direct">
+      <p>O escríbeme directamente por <a href="https://wa.me/5210000000000" target="_blank" class="whatsapp-link">WhatsApp</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Markos Duffel. Arte eterno.</p>
+    <p>© 2025 Markos Duffel. Arte eterno.</p>
   </footer>
+
 </body>
 </html>

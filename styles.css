@@ -1,173 +1,172 @@
-/* Tipografía y colores */
-body {
-  margin: 0;
-  font-family: 'Old Standard TT', serif;
-  background: linear-gradient(to bottom, #120012, #000);
-  color: #ddd;
-  overflow-x: hidden;
-}
-
-header {
-  text-align: center;
-  padding: 20px 10px;
-  background: #2c0040;
-  color: #e0cfff;
-  position: relative;
-  z-index: 1;
-}
-
-.logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 3em;
-  margin: 10px 0;
-}
-
-.slogan {
-  font-style: italic;
-  color: #c8a9ff;
-  margin-bottom: 20px;
-}
-
-.nav-background {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-  padding: 8px 20px;
-}
-
-nav a {
-  color: #e0cfff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ff8fff;
-}
-
-.seccion {
-  padding: 60px 20px;
-  text-align: center;
-  border-top: 2px solid #502e70;
-}
-
-h2 {
-  color: #b88aff;
-  font-size: 2em;
-  font-family: 'Almendra SC', serif;
-  margin-bottom: 20px;
-}
-
-.foto-bio {
-  width: 280px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-
-#about p {
-  max-width: 700px;
-  margin: 15px auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #eee;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.galeria img {
-  width: 220px;
-  border-radius: 10px;
-  border: 2px solid #742e9e;
-  transition: transform 0.3s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1em;
-  background: #1a1a1a;
-  color: #fff;
-  border: 1px solid #444;
-}
-
-button {
-  padding: 12px;
-  background-color: #7100a0;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #b44fff;
-}
-
-.whatsapp-boton {
-  display: inline-block;
-  margin-top: 15px;
-  background: #25d366;
-  color: #000;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  box-shadow: 0 0 10px #25d366;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0c0c0c;
-  color: #888;
-  font-size: 0.9em;
-}
-
-/* Fondo con rayos simulados */
-.fondo-rayos {
+/* Fondo de rayos animado */
+.background-rays {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('rayos.gif') center center / cover no-repeat;
+  background-image: url('rayos.gif');
+  background-size: cover;
+  background-position: center;
   z-index: -1;
-  opacity: 0.15;
-  animation: parpadeo 4s infinite alternate;
+  opacity: 0.12;
+  animation: flash 5s infinite alternate;
 }
 
-@keyframes parpadeo {
-  0% { opacity: 0.1; }
-  50% { opacity: 0.2; }
+@keyframes flash {
+  0% { opacity: 0.08; }
   100% { opacity: 0.15; }
 }
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'MedievalSharp', cursive;
+  background-color: #0e0e0e;
+  color: #f3f3f3;
+}
+
+h1, h2 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #b88aff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 8px #b88aff);
+}
+
+.slogan {
+  font-style: italic;
+  color: #e0d1ff;
+  font-size: 1.1rem;
+  margin-top: -0.5rem;
+}
+
+/* Navegación */
+nav {
+  background-color: rgba(36, 0, 50, 0.6);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav .menu li {
+  margin: 0 1rem;
+  background-color: rgba(100, 0, 150, 0.5);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav .menu li:hover {
+  background-color: rgba(180, 100, 255, 0.8);
+}
+
+nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Secciones */
+section {
+  padding: 2rem;
+  background-color: rgba(20, 20, 20, 0.85);
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(120, 0, 255, 0.2);
+}
+
+section p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Imagen de Markos */
+.markos-img {
+  width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+  border: 3px solid #b88aff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Galería */
+.tattoos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tattoos img {
+  width: 180px;
+  height: auto;
+  border: 2px solid #b88aff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tattoos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #b88aff;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.6rem;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #b88aff;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #b88aff;
+  color: #0e0e0e;
+  padding: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #d9b3ff;
+}
+
+/* WhatsApp */
+.whatsapp-direct {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.whatsapp-link {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Medieva
