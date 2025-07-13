@@ -262,3 +262,25 @@ form button:hover {
   background-color: #b88aff;
   color: #0e0e0e;
 }
+/* Botón flotante para volver arriba */
+.floating-back {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #b88aff;
+  color: #0e0e0e;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #b88aff, 0 0 30px #b88aff;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1001;
+}
+
+.floating-back:hover {
+  background-color: #d9b3ff;
+  transform: scale(1.1);
+}
+
