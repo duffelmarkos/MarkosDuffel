@@ -5,156 +5,109 @@ body {
     background-color: #0e001a;
     color: #fff;
 }
-
 header {
     text-align: center;
-    background: linear-gradient(to bottom, #220033, #0e001a);
-    padding: 40px 20px 20px;
+    padding: 40px 20px;
 }
-
 .logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-    box-shadow: 0 0 30px #aa66ff;
-    border-radius: 10px;
+    max-width: 120px;
 }
-
 h1 {
-    font-size: 2.8em;
-    color: #bb99ff;
-    margin: 0;
+    font-size: 2.8rem;
+    margin: 10px 0;
 }
-
 .slogan {
-    font-size: 1.2em;
-    font-family: 'Old Standard TT', serif;
-    font-style: italic;
-    color: #eee;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #b88aff;
+    margin-bottom: 20px;
 }
-
-nav {
-    margin-top: 20px;
-}
-
 nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 1.1rem;
     font-family: 'Old Standard TT', serif;
-    font-size: 1.1em;
-    transition: color 0.3s;
 }
-
 nav a:hover {
-    color: #bb99ff;
+    color: #b88aff;
 }
-
 section {
     padding: 40px 20px;
-}
-
-.gallery-container h2, #sobre-mi h2 {
-    font-family: 'Old Standard TT', serif;
-    font-size: 2em;
-    color: #bb99ff;
     text-align: center;
-    margin-bottom: 20px;
 }
-
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
-
-.gallery-item {
-    background-color: #111;
-    padding: 5px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.gallery-item:hover {
-    background-color: #5500aa;
-}
-
 .gallery-item img {
-    width: 100%;
+    width: 200px;
     height: auto;
+    border: 2px solid #6a0dad;
     border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+    background-color: rgba(186, 145, 255, 0.1);
 }
 
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.95);
-}
-
-.lightbox-content {
-    position: relative;
-    margin: auto;
-    padding: 10px;
-    max-width: 90%;
-    text-align: center;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
+.contact-form {
     max-width: 600px;
+    margin: 0 auto;
+    background: rgba(20, 0, 40, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #6a0dad;
 }
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 45px;
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+}
+.contact-form button {
+    margin-top: 20px;
+    background-color: #6a0dad;
     color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #b88aff;
+    color: #000;
 }
 
-.close:hover, .close:focus {
-    color: #999;
+.whatsapp-button-container {
+    margin-top: 30px;
+}
+.whatsapp-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4f2c8b, #6a0dad);
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 8px;
     text-decoration: none;
-    cursor: pointer;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
+    font-family: 'Old Standard TT', serif;
     font-weight: bold;
-    font-size: 30px;
-    transition: 0.3s;
-    user-select: none;
+    box-shadow: 0 0 10px #aa66ff, 0 0 20px #4f2c8b inset;
+    transition: all 0.3s ease-in-out;
 }
-
-.prev { left: 0; }
-.next { right: 0; }
-
-.prev:hover, .next:hover {
-    color: #bb99ff;
-}
-#tsparticles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.whatsapp-button:hover {
+    background: linear-gradient(135deg, #6a0dad, #b88aff);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #caaaff, 0 0 30px #6a0dad inset;
 }
