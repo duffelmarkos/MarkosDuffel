@@ -8,10 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body id="top">
 
+  <!-- Fondo rayos -->
   <div class="background-rays"></div>
 
+  <!-- Header -->
   <header class="centered">
     <img src="markoslogo.png" alt="Logo" class="logo" />
     <h1>Markos Duffel Tattoo</h1>
@@ -25,6 +27,7 @@
     </nav>
   </header>
 
+  <!-- Sección Sobre mí -->
   <section id="about" class="centered">
     <h2>Sobre mí</h2>
     <img src="markos.jpg" alt="Markos tatuando" class="markos-img" />
@@ -43,15 +46,13 @@
       Aquí no vienes a decorarte. Vienes a soltar el miedo. Vienes a comenzar de nuevo.
     </p>
   </section>
-<div class="back-to-top">
-  <a href="#top">⬆ Volver al inicio</a>
-</div>
 
-
+  <!-- Sección Galería -->
   <section id="work">
     <h2>Galería</h2>
     <div class="tattoos">
       <!-- Galería de imágenes -->
+      <!-- Puedes reemplazar estas imágenes por las tuyas -->
       <img src="picture (1).jpg" alt="Tattoo 1" />
       <img src="picture (2).jpg" alt="Tattoo 2" />
       <img src="picture (3).jpg" alt="Tattoo 3" />
@@ -82,11 +83,8 @@
       <img src="picture (28).jpg" alt="Tattoo 28" />
     </div>
   </section>
-<div class="back-to-top">
-  <a href="#top">⬆ Volver al inicio</a>
-</div>
 
-
+  <!-- Sección Contacto -->
   <section id="contact" class="centered">
     <h2>Agenda tu cita</h2>
     <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
@@ -101,34 +99,36 @@
       <p>O escríbeme directamente por <a href="https://wa.me/5210000000000" target="_blank" class="whatsapp-link">WhatsApp</a></p>
     </div>
   </section>
-<div class="back-to-top">
-  <a href="#top">⬆ Volver al inicio</a>
-</div>
 
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 Markos Duffel. Arte eterno.</p>
   </footer>
-<!-- Lightbox Viewer -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Zoom">
-</div>
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".tattoos img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+  <!-- Lightbox Viewer -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Zoom">
+  </div>
+
+  <!-- Botón flotante para volver al inicio -->
+  <a href="#top" class="floating-back">⬆</a>
+
+  <!-- Script Lightbox -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll(".tattoos img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
     });
-  });
 
-  function closeLightbox() {
-    lightbox.style.display = "none";
-  }
-</script>
-
+    function closeLightbox() {
+      lightbox.style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
