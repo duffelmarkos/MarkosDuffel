@@ -4,11 +4,153 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
     <meta charset="UTF-8">
     <title>Markos Duffel | Tattoo Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'UnifrakturCook', cursive;
+            background-color: #0e001a;
+            color: #e3c9ff;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .slogan {
+            font-style: italic;
+            margin: 10px 0 20px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        nav a {
+            color: #e3c9ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.3rem;
+            transition: transform 0.2s ease, color 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ff00ff;
+            text-shadow: 0 0 8px #aa66ff;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .bio-box {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .bio-box img {
+            width: 250px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 0 20px #aa66ff;
+        }
+
+        .gallery-container {
+            background-color: #120020;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 180px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px #ff00ff;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #aa66ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff00ff;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #25d366;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px #25d366;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebd5a;
+        }
+    </style>
 </head>
 <body>
 <div id="tsparticles"></div>
+
 <header>
     <img src="markoslogo.png" alt="Markos Logo" class="logo">
     <h1>Markos Duffel Tattoo</h1>
@@ -23,6 +165,7 @@
 <section id="sobre-mi">
     <h2>Sobre mí</h2>
     <div class="bio-box">
+        <img src="markos.jpg" alt="Markos Foto">
         <p>
             Nací en Ciudad Juárez, entre concreto, silencio y fuego.<br>
             Desde niño supe que el arte no era un pasatiempo… era un arma.<br>
@@ -44,39 +187,37 @@
     </div>
 </section>
 
-
 <section id="galeria" class="gallery-container">
     <h2>Galería</h2>
     <div class="gallery">
-        <!-- Aquí se espera que estén las imágenes picture (1).jpg a picture (28).jpg -->
         <div class="gallery-item"><img src="picture (1).jpg" alt="Tattoo 1" onclick="openLightbox();setCurrentSlide(1)"></div>
-<div class="gallery-item"><img src="picture (2).jpg" alt="Tattoo 2" onclick="openLightbox();setCurrentSlide(2)"></div>
-<div class="gallery-item"><img src="picture (3).jpg" alt="Tattoo 3" onclick="openLightbox();setCurrentSlide(3)"></div>
-<div class="gallery-item"><img src="picture (4).jpg" alt="Tattoo 4" onclick="openLightbox();setCurrentSlide(4)"></div>
-<div class="gallery-item"><img src="picture (5).jpg" alt="Tattoo 5" onclick="openLightbox();setCurrentSlide(5)"></div>
-<div class="gallery-item"><img src="picture (6).jpg" alt="Tattoo 6" onclick="openLightbox();setCurrentSlide(6)"></div>
-<div class="gallery-item"><img src="picture (7).jpg" alt="Tattoo 7" onclick="openLightbox();setCurrentSlide(7)"></div>
-<div class="gallery-item"><img src="picture (8).jpg" alt="Tattoo 8" onclick="openLightbox();setCurrentSlide(8)"></div>
-<div class="gallery-item"><img src="picture (9).jpg" alt="Tattoo 9" onclick="openLightbox();setCurrentSlide(9)"></div>
-<div class="gallery-item"><img src="picture (10).jpg" alt="Tattoo 10" onclick="openLightbox();setCurrentSlide(10)"></div>
-<div class="gallery-item"><img src="picture (11).jpg" alt="Tattoo 11" onclick="openLightbox();setCurrentSlide(11)"></div>
-<div class="gallery-item"><img src="picture (12).jpg" alt="Tattoo 12" onclick="openLightbox();setCurrentSlide(12)"></div>
-<div class="gallery-item"><img src="picture (13).jpg" alt="Tattoo 13" onclick="openLightbox();setCurrentSlide(13)"></div>
-<div class="gallery-item"><img src="picture (14).jpg" alt="Tattoo 14" onclick="openLightbox();setCurrentSlide(14)"></div>
-<div class="gallery-item"><img src="picture (15).jpg" alt="Tattoo 15" onclick="openLightbox();setCurrentSlide(15)"></div>
-<div class="gallery-item"><img src="picture (16).jpg" alt="Tattoo 16" onclick="openLightbox();setCurrentSlide(16)"></div>
-<div class="gallery-item"><img src="picture (17).jpg" alt="Tattoo 17" onclick="openLightbox();setCurrentSlide(17)"></div>
-<div class="gallery-item"><img src="picture (18).jpg" alt="Tattoo 18" onclick="openLightbox();setCurrentSlide(18)"></div>
-<div class="gallery-item"><img src="picture (19).jpg" alt="Tattoo 19" onclick="openLightbox();setCurrentSlide(19)"></div>
-<div class="gallery-item"><img src="picture (20).jpg" alt="Tattoo 20" onclick="openLightbox();setCurrentSlide(20)"></div>
-<div class="gallery-item"><img src="picture (21).jpg" alt="Tattoo 21" onclick="openLightbox();setCurrentSlide(21)"></div>
-<div class="gallery-item"><img src="picture (22).jpg" alt="Tattoo 22" onclick="openLightbox();setCurrentSlide(22)"></div>
-<div class="gallery-item"><img src="picture (23).jpg" alt="Tattoo 23" onclick="openLightbox();setCurrentSlide(23)"></div>
-<div class="gallery-item"><img src="picture (24).jpg" alt="Tattoo 24" onclick="openLightbox();setCurrentSlide(24)"></div>
-<div class="gallery-item"><img src="picture (25).jpg" alt="Tattoo 25" onclick="openLightbox();setCurrentSlide(25)"></div>
-<div class="gallery-item"><img src="picture (26).jpg" alt="Tattoo 26" onclick="openLightbox();setCurrentSlide(26)"></div>
-<div class="gallery-item"><img src="picture (27).jpg" alt="Tattoo 27" onclick="openLightbox();setCurrentSlide(27)"></div>
-<div class="gallery-item"><img src="picture (28).jpg" alt="Tattoo 28" onclick="openLightbox();setCurrentSlide(28)"></div>
+        <div class="gallery-item"><img src="picture (2).jpg" alt="Tattoo 2" onclick="openLightbox();setCurrentSlide(2)"></div>
+        <div class="gallery-item"><img src="picture (3).jpg" alt="Tattoo 3" onclick="openLightbox();setCurrentSlide(3)"></div>
+        <div class="gallery-item"><img src="picture (4).jpg" alt="Tattoo 4" onclick="openLightbox();setCurrentSlide(4)"></div>
+        <div class="gallery-item"><img src="picture (5).jpg" alt="Tattoo 5" onclick="openLightbox();setCurrentSlide(5)"></div>
+        <div class="gallery-item"><img src="picture (6).jpg" alt="Tattoo 6" onclick="openLightbox();setCurrentSlide(6)"></div>
+        <div class="gallery-item"><img src="picture (7).jpg" alt="Tattoo 7" onclick="openLightbox();setCurrentSlide(7)"></div>
+        <div class="gallery-item"><img src="picture (8).jpg" alt="Tattoo 8" onclick="openLightbox();setCurrentSlide(8)"></div>
+        <div class="gallery-item"><img src="picture (9).jpg" alt="Tattoo 9" onclick="openLightbox();setCurrentSlide(9)"></div>
+        <div class="gallery-item"><img src="picture (10).jpg" alt="Tattoo 10" onclick="openLightbox();setCurrentSlide(10)"></div>
+        <div class="gallery-item"><img src="picture (11).jpg" alt="Tattoo 11" onclick="openLightbox();setCurrentSlide(11)"></div>
+        <div class="gallery-item"><img src="picture (12).jpg" alt="Tattoo 12" onclick="openLightbox();setCurrentSlide(12)"></div>
+        <div class="gallery-item"><img src="picture (13).jpg" alt="Tattoo 13" onclick="openLightbox();setCurrentSlide(13)"></div>
+        <div class="gallery-item"><img src="picture (14).jpg" alt="Tattoo 14" onclick="openLightbox();setCurrentSlide(14)"></div>
+        <div class="gallery-item"><img src="picture (15).jpg" alt="Tattoo 15" onclick="openLightbox();setCurrentSlide(15)"></div>
+        <div class="gallery-item"><img src="picture (16).jpg" alt="Tattoo 16" onclick="openLightbox();setCurrentSlide(16)"></div>
+        <div class="gallery-item"><img src="picture (17).jpg" alt="Tattoo 17" onclick="openLightbox();setCurrentSlide(17)"></div>
+        <div class="gallery-item"><img src="picture (18).jpg" alt="Tattoo 18" onclick="openLightbox();setCurrentSlide(18)"></div>
+        <div class="gallery-item"><img src="picture (19).jpg" alt="Tattoo 19" onclick="openLightbox();setCurrentSlide(19)"></div>
+        <div class="gallery-item"><img src="picture (20).jpg" alt="Tattoo 20" onclick="openLightbox();setCurrentSlide(20)"></div>
+        <div class="gallery-item"><img src="picture (21).jpg" alt="Tattoo 21" onclick="openLightbox();setCurrentSlide(21)"></div>
+        <div class="gallery-item"><img src="picture (22).jpg" alt="Tattoo 22" onclick="openLightbox();setCurrentSlide(22)"></div>
+        <div class="gallery-item"><img src="picture (23).jpg" alt="Tattoo 23" onclick="openLightbox();setCurrentSlide(23)"></div>
+        <div class="gallery-item"><img src="picture (24).jpg" alt="Tattoo 24" onclick="openLightbox();setCurrentSlide(24)"></div>
+        <div class="gallery-item"><img src="picture (25).jpg" alt="Tattoo 25" onclick="openLightbox();setCurrentSlide(25)"></div>
+        <div class="gallery-item"><img src="picture (26).jpg" alt="Tattoo 26" onclick="openLightbox();setCurrentSlide(26)"></div>
+        <div class="gallery-item"><img src="picture (27).jpg" alt="Tattoo 27" onclick="openLightbox();setCurrentSlide(27)"></div>
+        <div class="gallery-item"><img src="picture (28).jpg" alt="Tattoo 28" onclick="openLightbox();setCurrentSlide(28)"></div>
     </div>
 </section>
 
@@ -103,29 +244,30 @@
 </section>
 
 <script>
-function openLightbox() {
-    document.getElementById("lightbox").style.display = "block";
-}
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-let slideIndex = 1;
-function setCurrentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    function openLightbox() {
+        document.getElementById("lightbox").style.display = "block";
     }
-    slides[slideIndex-1].style.display = "block";
-}
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+    let slideIndex = 1;
+    function setCurrentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
 </script>
+
 <script>
   tsParticles.load("tsparticles", {
     fullScreen: { enable: true, zIndex: -1 },
