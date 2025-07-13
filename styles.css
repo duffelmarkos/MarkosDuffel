@@ -78,6 +78,21 @@ nav .menu li a {
   text-decoration: none;
   font-weight: bold;
 }
+/* Glow en botones del menú */
+nav .menu li {
+  margin: 0 1rem;
+  background-color: rgba(100, 0, 150, 0.5);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 0 6px rgba(180, 100, 255, 0.3);
+}
+
+nav .menu li:hover {
+  background-color: rgba(180, 100, 255, 0.8);
+  box-shadow: 0 0 15px #b88aff, 0 0 30px #b88aff;
+}
+
 
 /* Secciones */
 section {
