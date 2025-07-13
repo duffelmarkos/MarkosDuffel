@@ -106,11 +106,15 @@ header {
 /* Secciones generales */
 section {
   padding: 2rem;
-  background-color: rgba(20, 20, 20, 0.85);
-  margin: 1rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(120, 0, 255, 0.2);
+  background-color: transparent;
+  margin: 2rem auto;
+  border-radius: 20px;
+  border: 1px solid rgba(184, 138, 255, 0.2);
+  box-shadow: 0 0 15px rgba(184, 138, 255, 0.3),
+              0 0 25px rgba(184, 138, 255, 0.15);
+  backdrop-filter: blur(1px);
 }
+
 
 section p {
   line-height: 1.7;
