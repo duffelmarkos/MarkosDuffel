@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markos Duffel | Tattoo Studio</title>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
+  <script>
+    window.onload = () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: true, zIndex: -1 },
+        background: {
+          color: "#0e0e0e"
+        },
+        particles: {
+          number: { value: 100 },
+          color: { value: ["#b88aff", "#ffffff"] },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.6,
+            animation: {
+              enable: true,
+              speed: 0.3,
+              minimumValue: 0,
+              sync: false
+            }
+          },
+          size: {
+            value: 2,
+            random: true
+          },
+          move: {
+            enable: true,
+            speed: 0.4,
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: { default: "out" }
+          },
+          links: {
+            enable: true,
+            distance: 140,
+            color: "#b88aff",
+            opacity: 0.4,
+            width: 1
+          }
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "trail" }
+          },
+          modes: {
+            trail: {
+              delay: 0.1,
+              quantity: 3,
+              particles: {
+                color: { value: "#ffffff" },
+                opacity: { value: 1 },
+                size: { value: 3 }
+              }
+            }
+          }
+        },
+        detectRetina: true
+      });
+    };
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #f3f3f3;
+    }
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    header {
+      background-color: rgba(60, 0, 102, 0.85);
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 100px;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 10px #b88aff);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      background-color: rgba(14, 14, 14, 0.8);
+      margin: 1rem;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: #b88aff;
+    }
+    .slogan {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #e0d1ff;
+      margin-top: 0.5rem;
+    }
+    .tattoos img {
+      width: 200px;
+      margin: 1rem;
+      border: 2px solid #b88aff;
+      border-radius: 10px;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+    }
+    form input, form textarea {
+      background: #1e1e1e;
+      color: #fff;
+    }
+    form button {
+      background-color: #3c0066;
+      color: #fff;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  <header>
+    <img src="markoslogo.png" alt="Logo Markos Duffel" />
+    <h1>Markos Duffel Tattoo</h1>
+    <div class="slogan">Donde termina el miedo y empieza el arte...</div>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#work">Galería</a>
+      <a href="#contact">Agenda tu cita</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy Markos Duffel, artista del tatuaje especializado en estilos oscuros, surrealistas y simbólicos. Cada trazo cuenta tu historia, y cada diseño está hecho para marcar el alma, no solo la piel.</p>
+  </section>
+
+  <section id="work">
+    <h2>Galería</h2>
+    <div class="tattoos">
+      <img src="tattoo1.jpg" alt="Tattoo 1" />
+      <img src="tattoo2.jpg" alt="Tattoo 2" />
+      <img src="tattoo3.jpg" alt="Tattoo 3" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Agenda tu cita</h2>
+    <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
+    <form action="mailto:duffelmarkos@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+      <input type="tel" name="telefono" placeholder="Tu WhatsApp (opcional)" />
+      <textarea name="mensaje" rows="5" placeholder="Cuéntame tu idea de tatuaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>O escríbeme directamente por <a href="https://wa.me/526563950686" target="_blank" style="color:#b88aff;">WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Markos Duffel. Arte eterno.</p>
+  </footer>
+</body>
+</html>
