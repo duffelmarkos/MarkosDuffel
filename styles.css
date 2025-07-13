@@ -141,12 +141,14 @@ section p {
 }
 
 .tattoos img {
-  width: 180px;
+  max-width: 200px;
   height: auto;
+  object-fit: cover;
   border: 2px solid #b88aff;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .tattoos img:hover {
   transform: scale(1.05);
