@@ -1,313 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
-    <meta charset="UTF-8">
-    <title>Markos Duffel | Tattoo Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'UnifrakturCook', cursive;
-            background-color: #0e001a;
-            color: #e3c9ff;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markos Duffel | Tattoo Studio</title>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Old+Standard+TT&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Old Standard TT', serif;
+      background-color: #0e0e0e;
+      color: #f3f3f3;
+    }
 
-        header {
-            padding: 40px 20px 10px;
-            background-color: rgba(0, 0, 0, 0.2);
-        }
+    #tsparticles, .lightning-overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
 
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    .lightning-overlay {
+      background: url('relampago.gif') center center / cover no-repeat;
+      mix-blend-mode: screen;
+      opacity: 0.12;
+      animation: flash 6s infinite ease-in-out;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+    @keyframes flash {
+      0%, 100% { opacity: 0.1; }
+      10% { opacity: 0.3; }
+      20% { opacity: 0.05; }
+      30% { opacity: 0.25; }
+      40%, 90% { opacity: 0.1; }
+    }
 
-        .slogan {
-            font-style: italic;
-            margin: 10px 0 20px;
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
+    header {
+      background-color: rgba(60, 0, 102, 0.85);
+      padding: 1rem;
+      text-align: center;
+    }
 
-        nav a {
-            color: #e3c9ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.3rem;
-            transition: transform 0.2s ease, color 0.3s;
-        }
+    nav a {
+      font-family: 'Old Standard TT', serif;
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
 
-        nav a:hover {
-            transform: scale(1.1);
-            color: #ff00ff;
-            text-shadow: 0 0 8px #aa66ff;
-        }
+    nav a:hover {
+      text-decoration: underline;
+      color: #b88aff;
+    }
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    section {
+      padding: 2rem;
+      background-color: rgba(14, 14, 14, 0.8);
+      margin: 1rem;
+      border-radius: 10px;
+    }
 
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+    h1 {
+      font-family: 'UnifrakturCook', cursive;
+      color: #b88aff;
+      font-size: 2.5rem;
+    }
 
-        .bio-box {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
+    h2 {
+      color: #b88aff;
+    }
 
-        .bio-box img {
-            width: 250px;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 0 20px #aa66ff;
-        }
+    .slogan {
+      font-family: 'Old Standard TT', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #e0d1ff;
+      margin-top: 0.5rem;
+    }
 
-        .gallery-container {
-            background-color: #120020;
-        }
+    .tattoos img {
+      width: 200px;
+      margin: 1rem;
+      border: 2px solid #b88aff;
+      border-radius: 10px;
+      transition: transform 0.3s, filter 0.3s;
+    }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
+    .tattoos img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+      background-color: #300048;
+    }
 
-        .gallery-item img {
-            width: 180px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+    }
 
-        .gallery-item img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 12px #ff00ff;
-        }
+    form input, form textarea {
+      background: #1e1e1e;
+      color: #fff;
+    }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    form button {
+      background-color: #3c0066;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 90%;
-            max-width: 400px;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
+    form button:hover {
+      background-color: #b88aff;
+      color: #000;
+    }
 
-        .contact-form button {
-            background-color: #aa66ff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #ff00ff;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #25d366;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            box-shadow: 0 0 10px #25d366;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1ebd5a;
-        }
-    </style>
+    footer {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-<div id="tsparticles"></div>
+  <div id="tsparticles"></div>
+  <div class="lightning-overlay"></div>
 
-<header>
-    <img src="markoslogo.png" alt="Markos Logo" class="logo">
+  <header>
+    <img src="markoslogo.png" alt="Markos Logo" style="width:120px; margin-bottom:1rem; filter: drop-shadow(0 0 10px #b88aff);">
     <h1>Markos Duffel Tattoo</h1>
-    <p class="slogan">Donde termina el miedo y empieza el arte...</p>
+    <div class="slogan">Donde termina el miedo y empieza el arte...</div>
     <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#galeria">Galería</a>
-        <a href="#cita">Agenda tu cita</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#work">Galería</a>
+      <a href="#contact">Agenda tu cita</a>
     </nav>
-</header>
+  </header>
 
-<section id="sobre-mi">
+  <section id="about">
     <h2>Sobre mí</h2>
-    <div class="bio-box">
-        <img src="markos.jpg" alt="Markos Foto">
-        <p>
-            Nací en Ciudad Juárez, entre concreto, silencio y fuego.<br>
-            Desde niño supe que el arte no era un pasatiempo… era un arma.<br>
-            Cuando no me dejaron tatuarme, comencé a tatuar a los demás.<br>
-            No pedí permiso. Solo seguí el llamado.
-        </p>
-        <p>
-            Cada línea que trazo es un pacto.<br>
-            Cada aguja es una extensión de mi alma.<br>
-            No hago tatuajes bonitos.<br>
-            Marco símbolos que cargan con historias, miedos, sombras…<br>
-            y los transformo en algo sagrado.
-        </p>
-        <p>
-            Aquí no vienes a decorarte.<br>
-            Vienes a soltar el miedo.<br>
-            Vienes a comenzar de nuevo.
-        </p>
-    </div>
+    <p>
+      Nací en Ciudad Juárez, entre concreto, silencio y fuego.<br>
+      Desde niño supe que el arte no era un pasatiempo… era un arma.<br>
+      Cuando no me dejaron tatuarme, comencé a tatuar a los demás.<br>
+      No pedí permiso. Solo seguí el llamado.<br><br>
+      Cada línea que trazo es un pacto.<br>
+      Cada aguja es una extensión de mi alma.<br>
+      No hago tatuajes bonitos. Marco símbolos que cargan con historias, miedos, sombras… y los transformo en algo sagrado.<br><br>
+      Aquí no vienes a decorarte. Vienes a soltar el miedo. Vienes a comenzar de nuevo.
+    </p>
+    <img src="markos.jpg" alt="Markos Duffel" style="max-width: 250px; border-radius: 10px; margin-top: 1rem;">
+  </section>
+
+<section id="work">
+  <h2>Galería</h2>
+  <div class="tattoos">
+      <img src="picture (1).jpg" alt="Tattoo 1">
+      <img src="picture (2).jpg" alt="Tattoo 2">
+      <img src="picture (3).jpg" alt="Tattoo 3">
+      <img src="picture (4).jpg" alt="Tattoo 4">
+      <img src="picture (5).jpg" alt="Tattoo 5">
+      <img src="picture (6).jpg" alt="Tattoo 6">
+      <img src="picture (7).jpg" alt="Tattoo 7">
+      <img src="picture (8).jpg" alt="Tattoo 8">
+      <img src="picture (9).jpg" alt="Tattoo 9">
+      <img src="picture (10).jpg" alt="Tattoo 10">
+      <img src="picture (11).jpg" alt="Tattoo 11">
+      <img src="picture (12).jpg" alt="Tattoo 12">
+      <img src="picture (13).jpg" alt="Tattoo 13">
+      <img src="picture (14).jpg" alt="Tattoo 14">
+      <img src="picture (15).jpg" alt="Tattoo 15">
+      <img src="picture (16).jpg" alt="Tattoo 16">
+      <img src="picture (17).jpg" alt="Tattoo 17">
+      <img src="picture (18).jpg" alt="Tattoo 18">
+      <img src="picture (19).jpg" alt="Tattoo 19">
+      <img src="picture (20).jpg" alt="Tattoo 20">
+      <img src="picture (21).jpg" alt="Tattoo 21">
+      <img src="picture (22).jpg" alt="Tattoo 22">
+      <img src="picture (23).jpg" alt="Tattoo 23">
+      <img src="picture (24).jpg" alt="Tattoo 24">
+      <img src="picture (25).jpg" alt="Tattoo 25">
+      <img src="picture (26).jpg" alt="Tattoo 26">
+      <img src="picture (27).jpg" alt="Tattoo 27">
+      <img src="picture (28).jpg" alt="Tattoo 28">
+  </div>
 </section>
 
-<section id="galeria" class="gallery-container">
-    <h2>Galería</h2>
-    <div class="gallery">
-        <div class="gallery-item"><img src="picture (1).jpg" alt="Tattoo 1" onclick="openLightbox();setCurrentSlide(1)"></div>
-        <div class="gallery-item"><img src="picture (2).jpg" alt="Tattoo 2" onclick="openLightbox();setCurrentSlide(2)"></div>
-        <div class="gallery-item"><img src="picture (3).jpg" alt="Tattoo 3" onclick="openLightbox();setCurrentSlide(3)"></div>
-        <div class="gallery-item"><img src="picture (4).jpg" alt="Tattoo 4" onclick="openLightbox();setCurrentSlide(4)"></div>
-        <div class="gallery-item"><img src="picture (5).jpg" alt="Tattoo 5" onclick="openLightbox();setCurrentSlide(5)"></div>
-        <div class="gallery-item"><img src="picture (6).jpg" alt="Tattoo 6" onclick="openLightbox();setCurrentSlide(6)"></div>
-        <div class="gallery-item"><img src="picture (7).jpg" alt="Tattoo 7" onclick="openLightbox();setCurrentSlide(7)"></div>
-        <div class="gallery-item"><img src="picture (8).jpg" alt="Tattoo 8" onclick="openLightbox();setCurrentSlide(8)"></div>
-        <div class="gallery-item"><img src="picture (9).jpg" alt="Tattoo 9" onclick="openLightbox();setCurrentSlide(9)"></div>
-        <div class="gallery-item"><img src="picture (10).jpg" alt="Tattoo 10" onclick="openLightbox();setCurrentSlide(10)"></div>
-        <div class="gallery-item"><img src="picture (11).jpg" alt="Tattoo 11" onclick="openLightbox();setCurrentSlide(11)"></div>
-        <div class="gallery-item"><img src="picture (12).jpg" alt="Tattoo 12" onclick="openLightbox();setCurrentSlide(12)"></div>
-        <div class="gallery-item"><img src="picture (13).jpg" alt="Tattoo 13" onclick="openLightbox();setCurrentSlide(13)"></div>
-        <div class="gallery-item"><img src="picture (14).jpg" alt="Tattoo 14" onclick="openLightbox();setCurrentSlide(14)"></div>
-        <div class="gallery-item"><img src="picture (15).jpg" alt="Tattoo 15" onclick="openLightbox();setCurrentSlide(15)"></div>
-        <div class="gallery-item"><img src="picture (16).jpg" alt="Tattoo 16" onclick="openLightbox();setCurrentSlide(16)"></div>
-        <div class="gallery-item"><img src="picture (17).jpg" alt="Tattoo 17" onclick="openLightbox();setCurrentSlide(17)"></div>
-        <div class="gallery-item"><img src="picture (18).jpg" alt="Tattoo 18" onclick="openLightbox();setCurrentSlide(18)"></div>
-        <div class="gallery-item"><img src="picture (19).jpg" alt="Tattoo 19" onclick="openLightbox();setCurrentSlide(19)"></div>
-        <div class="gallery-item"><img src="picture (20).jpg" alt="Tattoo 20" onclick="openLightbox();setCurrentSlide(20)"></div>
-        <div class="gallery-item"><img src="picture (21).jpg" alt="Tattoo 21" onclick="openLightbox();setCurrentSlide(21)"></div>
-        <div class="gallery-item"><img src="picture (22).jpg" alt="Tattoo 22" onclick="openLightbox();setCurrentSlide(22)"></div>
-        <div class="gallery-item"><img src="picture (23).jpg" alt="Tattoo 23" onclick="openLightbox();setCurrentSlide(23)"></div>
-        <div class="gallery-item"><img src="picture (24).jpg" alt="Tattoo 24" onclick="openLightbox();setCurrentSlide(24)"></div>
-        <div class="gallery-item"><img src="picture (25).jpg" alt="Tattoo 25" onclick="openLightbox();setCurrentSlide(25)"></div>
-        <div class="gallery-item"><img src="picture (26).jpg" alt="Tattoo 26" onclick="openLightbox();setCurrentSlide(26)"></div>
-        <div class="gallery-item"><img src="picture (27).jpg" alt="Tattoo 27" onclick="openLightbox();setCurrentSlide(27)"></div>
-        <div class="gallery-item"><img src="picture (28).jpg" alt="Tattoo 28" onclick="openLightbox();setCurrentSlide(28)"></div>
-    </div>
-</section>
 
-<section id="cita">
+  <section id="contact">
     <h2>Agenda tu cita</h2>
-    <form class="contact-form" action="mailto:duffelmarkos@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Mensaje / Diseño deseado:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Enviar mensaje</button>
+    <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
+    <form action="mailto:duffelmarkos@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Tu WhatsApp (opcional)">
+      <textarea name="mensaje" rows="5" placeholder="Cuéntame tu idea de tatuaje" required></textarea>
+      <button type="submit">Enviar</button>
     </form>
+    <p>O escríbeme directamente por <a href="https://wa.me/526563950686" target="_blank" style="color:#b88aff;">WhatsApp</a></p>
+  </section>
 
-    <div class="whatsapp-button-container">
-        <a href="https://wa.me/526563950686" target="_blank" class="whatsapp-button">
-            💬 Contactar por WhatsApp
-        </a>
-    </div>
-</section>
+  <footer>
+    <p>&copy; 2025 Markos Duffel. Arte eterno.</p>
+  </footer>
 
-<script>
-    function openLightbox() {
-        document.getElementById("lightbox").style.display = "block";
-    }
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-    let slideIndex = 1;
-    function setCurrentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    function changeSlide(n) {
-        showSlides(slideIndex += n);
-    }
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-</script>
-
-<script>
-  tsParticles.load("tsparticles", {
-    fullScreen: { enable: true, zIndex: -1 },
-    background: { color: "#0e001a" },
-    particles: {
-      number: { value: 60 },
-      color: { value: ["#b88aff", "#ffffff"] },
-      shape: { type: "circle" },
-      opacity: {
-        value: 0.4,
-        animation: { enable: true, speed: 0.5 }
-      },
-      size: { value: 2, random: true },
-      move: { enable: true, speed: 0.3, random: true },
-      links: {
-        enable: true,
-        distance: 140,
-        color: "#aa66ff",
-        opacity: 0.4,
-        width: 1
-      }
-    },
-    interactivity: {
-      events: {
-        onHover: { enable: true, mode: "trail" }
-      },
-      modes: {
-        trail: {
-          delay: 0.2,
-          quantity: 4,
-          particles: {
-            color: { value: "#ffffff" },
-            opacity: { value: 0.6 },
-            size: { value: 3 }
+  <script>
+    window.onload = () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: true, zIndex: -3 },
+        background: { color: "#0e0e0e" },
+        particles: {
+          number: { value: 100 },
+          color: { value: ["#b88aff", "#ffffff"] },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.6,
+            animation: { enable: true, speed: 0.6 }
+          },
+          size: { value: 2, random: true },
+          move: { enable: true, speed: 0.4, random: true },
+          links: {
+            enable: true,
+            distance: 140,
+            color: "#aa66ff",
+            opacity: 0.5,
+            width: 1
           }
-        }
-      }
-    },
-    detectRetina: true
-  });
-</script>
+        },
+        interactivity: {
+          events: { onHover: { enable: true, mode: "trail" } },
+          modes: {
+            trail: {
+              delay: 0.1,
+              quantity: 4,
+              particles: {
+                color: { value: "#ffffff" },
+                opacity: { value: 1 },
+                size: { value: 3 }
+              }
+            }
+          }
+        },
+        detectRetina: true
+      });
+    };
+  </script>
 </body>
 </html>
