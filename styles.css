@@ -33,7 +33,7 @@ h1, h2 {
   text-shadow: 2px 2px 4px #000;
 }
 
-/* Centrado general */
+/* Centrado */
 .centered {
   text-align: center;
 }
@@ -90,39 +90,34 @@ nav .menu li a {
   font-weight: bold;
 }
 
-/* Header limpio sin fondo adicional */
+/* Header */
 header {
   background: none;
   padding-top: 2rem;
 }
 
-/* Secciones centradas */
-#about,
-#contact {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Secciones generales */
+/* Secciones */
 section {
   padding: 2rem;
   background-color: transparent;
   margin: 2rem auto;
   border-radius: 20px;
-  border: 1px solid rgba(184, 138, 255, 0.2);
-  box-shadow: 0 0 20px rgba(184, 138, 255, 0.5),
-            0 0 40px rgba(184, 138, 255, 0.2);
-
+  border: 1px solid rgba(184, 138, 255, 0.3);
+  box-shadow: 0 0 10px #b88aff;
   backdrop-filter: blur(1px);
+  transition: box-shadow 0.3s;
 }
 
+section:hover {
+  box-shadow: 0 0 20px #b88aff, 0 0 40px rgba(184, 138, 255, 0.4);
+}
 
 section p {
   line-height: 1.7;
   font-size: 1rem;
 }
 
-/* Imagen redonda de Markos */
+/* Imagen circular de Markos */
 .markos-img {
   width: 180px;
   border-radius: 50%;
@@ -141,18 +136,17 @@ section p {
 }
 
 .tattoos img {
-  max-width: 200px;
-  height: auto;
+  width: 200px;
+  height: 260px;
   object-fit: cover;
   border: 2px solid #b88aff;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .tattoos img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 12px #b88aff;
+  box-shadow: 0 0 15px #b88aff;
 }
 
 /* Formulario */
@@ -187,7 +181,7 @@ form button:hover {
   background-color: #d9b3ff;
 }
 
-/* WhatsApp contacto */
+/* WhatsApp directo */
 .whatsapp-direct {
   margin-top: 1.2rem;
   text-align: center;
@@ -203,6 +197,7 @@ form button:hover {
   font-weight: bold;
 }
 
+/* Lightbox */
 .lightbox {
   position: fixed;
   top: 0;
@@ -235,22 +230,23 @@ form button:hover {
     opacity: 1;
   }
 }
-.back-to-top {
-  text-align: center;
-  margin-top: 2rem;
-}
 
-.back-to-top a {
-  color: #b88aff;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid #b88aff;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: background 0.3s;
-}
-
-.back-to-top a:hover {
+/* Botón fijo para volver arriba */
+.floating-back {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: #b88aff;
   color: #0e0e0e;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #b88aff;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.floating-back:hover {
+  background-color: #d9b3ff;
 }
