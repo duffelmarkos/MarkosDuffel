@@ -126,22 +126,25 @@ section p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .tattoos img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
-  border: 2px solid #b88aff;
   border-radius: 10px;
+  border: 2px solid #b88aff;
+  box-shadow: 0 0 10px rgba(184, 138, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(184, 138, 255, 0.4);
 }
 
 .tattoos img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #b88aff, 0 0 30px #b88aff;
+  transform: scale(1.06);
+  box-shadow: 0 0 15px #b88aff, 0 0 25px #b88aff;
 }
+
 
 /* Formulario */
 form {
