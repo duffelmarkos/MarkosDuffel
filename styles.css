@@ -18,7 +18,7 @@
   100% { opacity: 0.15; }
 }
 
-/* Estilos generales */
+/* Estilo general */
 body {
   margin: 0;
   font-family: 'MedievalSharp', cursive;
@@ -34,7 +34,6 @@ h1, h2 {
   text-align: center;
 }
 
-/* Centrado general */
 .centered {
   text-align: center;
 }
@@ -91,13 +90,7 @@ nav .menu li a {
   font-weight: bold;
 }
 
-/* Header limpio */
-header {
-  background: none;
-  padding-top: 2rem;
-}
-
-/* Secciones generales */
+/* Secciones */
 section {
   padding: 2rem;
   background-color: transparent;
@@ -110,14 +103,14 @@ section {
   max-width: 900px;
 }
 
-/* Texto general */
+/* Texto */
 section p {
   line-height: 1.7;
   font-size: 1rem;
   text-align: center;
 }
 
-/* Imagen redonda de Markos */
+/* Imagen redonda */
 .markos-img {
   width: 180px;
   border-radius: 50%;
@@ -127,14 +120,7 @@ section p {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-/* Sección de Galería */
-#work {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-/* Galería de tatuajes */
+/* Galería */
 .tattoos {
   display: flex;
   flex-wrap: wrap;
@@ -162,10 +148,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
   max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
 }
 
 form input,
@@ -192,7 +176,7 @@ form button:hover {
   background-color: #d9b3ff;
 }
 
-/* WhatsApp contacto */
+/* WhatsApp */
 .whatsapp-direct {
   margin-top: 1.2rem;
   text-align: center;
@@ -242,27 +226,7 @@ form button:hover {
   }
 }
 
-/* Botón regresar arriba */
-.back-to-top {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.back-to-top a {
-  color: #b88aff;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid #b88aff;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: background 0.3s;
-}
-
-.back-to-top a:hover {
-  background-color: #b88aff;
-  color: #0e0e0e;
-}
-/* Botón flotante para volver arriba */
+/* Botón flotante */
 .floating-back {
   position: fixed;
   bottom: 30px;
@@ -284,3 +248,11 @@ form button:hover {
   transform: scale(1.1);
 }
 
+@media (max-width: 600px) {
+  .floating-back {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
