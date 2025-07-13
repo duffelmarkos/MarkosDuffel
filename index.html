@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markos Duffel | Tattoo Studio</title>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body id="top">
 
@@ -51,8 +51,7 @@
   <section id="work">
     <h2>Galería</h2>
     <div class="tattoos">
-      <!-- Galería de imágenes -->
-      <!-- Puedes reemplazar estas imágenes por las tuyas -->
+      <!-- 28 imágenes -->
       <img src="picture (1).jpg" alt="Tattoo 1" />
       <img src="picture (2).jpg" alt="Tattoo 2" />
       <img src="picture (3).jpg" alt="Tattoo 3" />
@@ -67,6 +66,7 @@
       <img src="picture (12).jpg" alt="Tattoo 12" />
       <img src="picture (13).jpg" alt="Tattoo 13" />
       <img src="picture (14).jpg" alt="Tattoo 14" />
+      <img src="picture (15).jpg" alt="Tattoo 15" />
       <img src="picture (16).jpg" alt="Tattoo 16" />
       <img src="picture (17).jpg" alt="Tattoo 17" />
       <img src="picture (18).jpg" alt="Tattoo 18" />
@@ -88,13 +88,12 @@
     <h2>Agenda tu cita</h2>
     <p>Llena el formulario y me pondré en contacto contigo por correo o WhatsApp.</p>
     <form id="contact-form" onsubmit="sendEmail(event)">
-  <input type="text" id="name" placeholder="Tu nombre" required />
-  <input type="email" id="email" placeholder="Tu correo electrónico" required />
-  <input type="tel" id="whatsapp" placeholder="Tu WhatsApp (opcional)" />
-  <textarea id="message" placeholder="Cuéntame tu idea de tatuaje" rows="4"></textarea>
-  <button type="submit">Enviar</button>
-</form>
-
+      <input type="text" id="name" placeholder="Tu nombre" required />
+      <input type="email" id="email" placeholder="Tu correo electrónico" required />
+      <input type="tel" id="whatsapp" placeholder="Tu WhatsApp (opcional)" />
+      <textarea id="message" placeholder="Cuéntame tu idea de tatuaje" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
     <div class="whatsapp-direct">
       <p>O escríbeme directamente por <a href="https://wa.me/5216563950686" target="_blank" class="whatsapp-link">WhatsApp</a></p>
     </div>
@@ -105,50 +104,37 @@
     <p>© 2025 Markos Duffel. Arte eterno.</p>
   </footer>
 
-  <!-- Lightbox Viewer -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Zoom" />
   </div>
 
-  <!-- Botón flotante para volver arriba -->
-  <div class="back-to-top">
-    <a href="#top">⬆ Regresar arriba</a>
-  </div>
-
-  <!-- Script Lightbox -->
   <script>
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
-
     document.querySelectorAll(".tattoos img").forEach(img => {
       img.addEventListener("click", () => {
         lightbox.style.display = "flex";
         lightboxImg.src = img.src;
       });
     });
-
     function closeLightbox() {
       lightbox.style.display = "none";
     }
+
+    function sendEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const subject = encodeURIComponent("Nueva cita desde el sitio web");
+      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\nWhatsApp: ${whatsapp}\n\nMensaje:\n${message}`);
+      window.location.href = `mailto:duffelmarkos@gmail.com?subject=${subject}&body=${body}`;
+    }
   </script>
-<script>
-  function sendEmail(event) {
-    event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const whatsapp = document.getElementById("whatsapp").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const subject = encodeURIComponent("Nueva cita desde el sitio web");
-    const body = encodeURIComponent(
-      `Nombre: ${name}\nCorreo: ${email}\nWhatsApp: ${whatsapp}\n\nMensaje:\n${message}`
-    );
-
-    window.location.href = `mailto:duffelmarkos@gmail.com?subject=${subject}&body=${body}`;
-  }
-</script>
-
-
+  <!-- Botón flotante -->
+  <a href="#top" class="floating-back" title="Volver arriba">⬆</a>
 </body>
 </html>
