@@ -170,3 +170,15 @@ form button:hover {
   text-decoration: none;
   font-weight: bold;
   font-family: 'Medieva
+
+/* Centrado global */
+.centered {
+  text-align: center;
+}
+
+/* Header sin fondo */
+header {
+  background: none;
+  padding-top: 2rem;
+}
+
