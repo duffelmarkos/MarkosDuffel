@@ -235,3 +235,22 @@ form button:hover {
     opacity: 1;
   }
 }
+.back-to-top {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-to-top a {
+  color: #b88aff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #b88aff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.back-to-top a:hover {
+  background-color: #b88aff;
+  color: #0e0e0e;
+}
