@@ -92,7 +92,7 @@
       <input type="text" placeholder="Tu nombre" required />
       <input type="email" placeholder="Tu correo electrónico" required />
       <input type="tel" placeholder="Tu WhatsApp (opcional)" />
-      <textarea placeholder="Cuéntame tu idea de tatuaje"></textarea>
+      <textarea placeholder="Cuéntame tu idea de tatuaje" rows="4"></textarea>
       <button type="submit">Enviar</button>
     </form>
     <div class="whatsapp-direct">
@@ -101,17 +101,19 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="centered">
     <p>© 2025 Markos Duffel. Arte eterno.</p>
   </footer>
 
   <!-- Lightbox Viewer -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Zoom">
+    <img id="lightbox-img" src="" alt="Zoom" />
   </div>
 
-  <!-- Botón flotante para volver al inicio -->
-  <a href="#top" class="floating-back">⬆</a>
+  <!-- Botón flotante para volver arriba -->
+  <div class="back-to-top">
+    <a href="#top">⬆ Regresar arriba</a>
+  </div>
 
   <!-- Script Lightbox -->
   <script>
